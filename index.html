@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Clara Nunes Lopes | Técnica de Informática</title>
+  <meta name="description" content="Portfólio de Maria Clara Nunes Lopes - Estudante de Técnico em Informática. Conheça meus projetos, habilidades técnicas em TI e formas de contato.">
+  <meta name="author" content="Maria Clara Nunes Lopes">
+  <meta name="theme-color" content="#060b18">
+
+  <!-- Favicon SVG Tecnológico -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23060b18'/%3E%3Cpath d='M30 70 L50 25 L70 70 M40 55 L60 55' stroke='%2338bdf8' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='75' cy='25' r='6' fill='%2300e5ff'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos Principais -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Script anti-flicker: carrega o tema salvo antes da renderização -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('portfolio-theme') || localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- =================================================================
+       BARRA DE NAVEGAÇÃO (HEADER)
+  ================================================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#inicio" class="logo" aria-label="Página inicial de Maria Clara Nunes Lopes">
+        <span class="logo-symbol">&lt;</span>MCNL<span class="logo-symbol">/&gt;</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <!-- Menu Principal Desktop e Mobile -->
+      <nav class="nav" aria-label="Navegação principal">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações do Cabeçalho -->
+      <div class="nav-actions">
+        <!-- Botão Alternador de Modo Claro / Escuro -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Alternar entre modo claro e escuro" title="Alternar entre modo claro e escuro">
+          <span class="theme-icon-moon" aria-hidden="true">🌙</span>
+          <span class="theme-icon-sun" aria-hidden="true">☀️</span>
+        </button>
+
+        <a href="https://github.com/37731-svg" target="_blank" rel="noopener noreferrer" class="btn-github-nav" aria-label="Visitar perfil de Maria Clara no GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <!-- Botão Hambúrguer Mobile -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =================================================================
+         SEÇÃO 1: INÍCIO (HERO)
+    ================================================================== -->
+    <section class="section hero-section" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Coluna Textual -->
+          <div class="hero-content reveal-fade-up">
+            <div class="status-badge">
+              <span class="pulse-indicator" aria-hidden="true"></span>
+              <span>Disponível para oportunidades & aprendizado em TI</span>
+            </div>
+
+            <h1 class="hero-title">
+              Olá, eu sou<br>
+              <span class="highlight-gradient">Maria Clara Nunes Lopes</span>
+              <span class="hero-area-badge">&lt;Técnica de Informática /&gt;</span>
+            </h1>
+
+            <p class="hero-description">
+              Sou estudante, tenho grande interesse por tecnologia, gosto de aprender constantemente e estou focada em desenvolver minhas habilidades na área de Tecnologia da Informação.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projetos" class="btn btn-primary">
+                <span>Conhecer Meus Projetos</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <a href="#contato" class="btn btn-secondary">
+                <span>Entrar em Contato</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="highlight-text">
+                  <span class="highlight-label">Habilidade Chave</span>
+                  <span class="highlight-value">Alta Agilidade</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div class="highlight-text">
+                  <span class="highlight-label">Formação</span>
+                  <span class="highlight-value">Técnico em Informática</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Visual: Janela Interativa de Código Tecnológico -->
+          <div class="hero-visual reveal-fade-up delay-2">
+            <div class="tech-window" role="region" aria-label="Terminal de apresentação tecnológica de Maria Clara">
+              <div class="window-header">
+                <div class="window-dots" aria-hidden="true">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <div class="window-title">perfil_maria_clara.js</div>
+                <div class="window-badge">TI & Dev</div>
+              </div>
+              <div class="window-body">
+                <div class="code-line"><span class="ln">01</span><span class="syntax-keyword">const</span> <span class="syntax-var">estudante</span> = {</div>
+                <div class="code-line"><span class="ln">02</span>  <span class="syntax-prop">nome</span>: <span class="syntax-string">'Maria Clara Nunes Lopes'</span>,</div>
+                <div class="code-line"><span class="ln">03</span>  <span class="syntax-prop">area</span>: <span class="syntax-string">'Técnica de Informática'</span>,</div>
+                <div class="code-line"><span class="ln">04</span>  <span class="syntax-prop">perfil</span>: <span class="syntax-string">'Aprendizado Contínuo & Foco em TI'</span>,</div>
+                <div class="code-line"><span class="ln">05</span>  <span class="syntax-prop">destaque</span>: <span class="syntax-string">'Agilidade & Prontidão'</span>,</div>
+                <div class="code-line"><span class="ln">06</span>  <span class="syntax-prop">status</span>: <span class="syntax-string">'Desenvolvendo novas competências'</span></div>
+                <div class="code-line"><span class="ln">07</span>};</div>
+                <div class="code-line"><span class="ln">08</span></div>
+                <div class="code-line"><span class="ln">09</span><span class="syntax-comment">// Executar objetivo profissional</span></div>
+                <div class="code-line"><span class="ln">10</span><span class="syntax-keyword">function</span> <span class="syntax-var">construirFuturo</span>() {</div>
+                <div class="code-line"><span class="ln">11</span>  <span class="syntax-keyword">return</span> <span class="syntax-string">'Inovação, código limpo e dedicação!'</span>;</div>
+                <div class="code-line"><span class="ln">12</span>}</div>
+
+                <div class="tech-window-stats">
+                  <div class="stat-box">
+                    <span class="stat-box-title">Metodologia</span>
+                    <span class="stat-box-desc">Prática & Agilidade</span>
+                  </div>
+                  <div class="stat-box">
+                    <span class="stat-box-title">Interesses</span>
+                    <span class="stat-box-desc">Web, Código & TI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SEÇÃO 2: SOBRE MIM
+    ================================================================== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        
+        <div class="section-header reveal-fade-up">
+          <div class="section-tag">
+            <span class="dot"></span>
+            <span>Apresentação</span>
+          </div>
+          <h2 class="section-title">Sobre <span class="highlight-gradient">Mim</span></h2>
+          <p class="section-subtitle">
+            Conheça minha trajetória como estudante, minhas motivações e o que impulsiona meu desenvolvimento na tecnologia.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Texto Biográfico -->
+          <div class="about-text-content reveal-fade-up">
+            <h3 class="about-intro">
+              Dedicada a transformar curiosidade em soluções práticas na área de Tecnologia da Informação.
+            </h3>
+            <p class="about-paragraph">
+              Meu nome é <strong>Maria Clara Nunes Lopes</strong> e sou estudante do curso <strong>Técnico em Informática</strong>. Desde cedo desenvolvi um profundo interesse pelo universo da tecnologia e pela forma como ela pode otimizar processos e conectar pessoas.
+            </p>
+            <p class="about-paragraph">
+              Sou uma pessoa que <strong>gosta genuinamente de aprender</strong>, sempre disposta a encarar novos conceitos, ferramentas e desafios lógicos. Tenho como foco consolidar minha formação técnica através de projetos escolares, práticas de programação e aplicação do conhecimento em cenários do mundo real.
+            </p>
+            <p class="about-paragraph">
+              Busco constantemente aprimorar minhas competências no ecossistema de TI, combinando base teórica com aplicação prática, organização e comprometimento.
+            </p>
+          </div>
+
+          <!-- Grade de Cartões de Atributos -->
+          <div class="about-cards-grid reveal-fade-up delay-1">
+            
+            <!-- Card 1: Formação -->
+            <div class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+              <h4 class="about-card-title">Técnico em Informática</h4>
+              <p class="about-card-desc">
+                Formação com ênfase em computação, raciocínio lógico, fundamentos de hardware, redes e estruturação de software.
+              </p>
+            </div>
+
+            <!-- Card 2: Agilidade (Destaque) -->
+            <div class="about-card highlight-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h4 class="about-card-title">Agilidade</h4>
+              <p class="about-card-desc">
+                Capacidade de adaptação rápida a novos contextos, assimilação dinâmica de ferramentas e resposta proativa a desafios.
+              </p>
+            </div>
+
+            <!-- Card 3: Paixão por Aprender -->
+            <div class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 16v-4"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </div>
+              <h4 class="about-card-title">Vontade de Aprender</h4>
+              <p class="about-card-desc">
+                Curiosidade constante em explorar novas tecnologias, linguagens e boas práticas recomendadas da indústria.
+              </p>
+            </div>
+
+            <!-- Card 4: Objetivo em TI -->
+            <div class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <h4 class="about-card-title">Evolução Contínua</h4>
+              <p class="about-card-desc">
+                Construção contínua de portfólio prático com foco no mercado profissional e na excelência técnica.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SEÇÃO 3: PROJETOS
+    ================================================================== -->
+    <section class="section" id="projetos">
+      <div class="container">
+        
+        <div class="section-header reveal-fade-up">
+          <div class="section-tag">
+            <span class="dot"></span>
+            <span>Trabalhos & Práticas</span>
+          </div>
+          <h2 class="section-title">Meus <span class="highlight-gradient">Projetos</span></h2>
+          <p class="section-subtitle">
+            Estrutura criada para apresentar meus projetos escolares e práticas de desenvolvimento durante minha formação técnica.
+          </p>
+        </div>
+
+        <!-- Banner Informativo da Seção de Projetos -->
+        <div class="projects-header-info reveal-fade-up">
+          <div class="projects-notice">
+            <div class="projects-notice-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <span>
+              <strong>Área expansível:</strong> Cards estruturados para acomodar novos trabalhos escolares, exercícios práticos e repositórios do meu GitHub.
+            </span>
+          </div>
+          <a href="https://github.com/37731-svg" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+            Ver Todos no GitHub
+          </a>
+        </div>
+
+        <!-- Grade de Cards de Projetos -->
+        <div class="projects-grid">
+          
+          <!-- Projeto 1: Desenvolvimento Web -->
+          <article class="project-card reveal-fade-up delay-1">
+            <div class="project-banner">
+              <span class="project-category-badge">Projeto Escolar</span>
+              <!-- Ilustração SVG Tecnológica para Web -->
+              <svg class="project-svg-graphic" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de interface web responsiva">
+                <rect width="400" height="200" fill="#081024" />
+                <circle cx="200" cy="100" r="80" fill="url(#p1-grad)" opacity="0.15" />
+                <!-- Janela de Navegador -->
+                <rect x="50" y="30" width="300" height="150" rx="8" fill="#0c1733" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+                <rect x="50" y="30" width="300" height="24" fill="#081024" />
+                <circle cx="65" cy="42" r="3.5" fill="#ef4444" />
+                <circle cx="77" cy="42" r="3.5" fill="#f59e0b" />
+                <circle cx="89" cy="42" r="3.5" fill="#10b981" />
+                <rect x="110" y="37" width="160" height="10" rx="4" fill="#1e293b" />
+                <!-- Layout da página simulada -->
+                <rect x="68" y="68" width="120" height="12" rx="3" fill="#38bdf8" opacity="0.8" />
+                <rect x="68" y="88" width="180" height="8" rx="2" fill="#64748b" opacity="0.5" />
+                <rect x="68" y="102" width="150" height="8" rx="2" fill="#64748b" opacity="0.4" />
+                <rect x="68" y="125" width="70" height="20" rx="4" fill="#0284c7" />
+                <!-- Bloco lateral -->
+                <rect x="220" y="68" width="112" height="78" rx="6" fill="#132347" stroke="#38bdf8" stroke-opacity="0.2" />
+                <circle cx="276" cy="107" r="18" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1.5" />
+                <path d="M272 107 L275 110 L281 104" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <defs>
+                  <radialGradient id="p1-grad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 100) rotate(90) scale(80)">
+                    <stop stop-color="#38bdf8"/>
+                    <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">Interface Web Responsiva & Acessível</h3>
+              <p class="project-desc">
+                Projeto prático focado na construção de páginas modernas com HTML5 semântico, estilização com CSS avançado (Flexbox e Grid) e adequação para telas móveis e desktop.
+              </p>
+              <div class="project-tags">
+                <span class="tag-pill">HTML5</span>
+                <span class="tag-pill">CSS3</span>
+                <span class="tag-pill">Responsividade</span>
+                <span class="tag-pill">Acessibilidade</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/37731-svg" target="_blank" rel="noopener noreferrer" class="project-link-btn primary" aria-label="Acessar código do projeto web no GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Repositório</span>
+                </a>
+                <a href="#contato" class="project-link-btn">
+                  <span>Detalhes</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 2: Lógica de Programação e Algoritmos -->
+          <article class="project-card reveal-fade-up delay-2">
+            <div class="project-banner">
+              <span class="project-category-badge">Prática de Código</span>
+              <!-- Ilustração SVG Tecnológica para Algoritmos -->
+              <svg class="project-svg-graphic" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de terminal de algoritmos">
+                <rect width="400" height="200" fill="#081024" />
+                <circle cx="200" cy="100" r="80" fill="url(#p2-grad)" opacity="0.15" />
+                <!-- Terminal -->
+                <rect x="50" y="30" width="300" height="150" rx="8" fill="#070d1e" stroke="#00e5ff" stroke-opacity="0.25" stroke-width="1.5" />
+                <rect x="50" y="30" width="300" height="24" fill="#040812" />
+                <circle cx="65" cy="42" r="3.5" fill="#ef4444" />
+                <circle cx="77" cy="42" r="3.5" fill="#f59e0b" />
+                <circle cx="89" cy="42" r="3.5" fill="#10b981" />
+                <text x="110" y="46" fill="#64748b" font-family="monospace" font-size="10">algoritmos_pratica.sh</text>
+                <!-- Linhas de código do terminal -->
+                <text x="70" y="80" fill="#38bdf8" font-family="monospace" font-size="11">$ exec_logic --analyze</text>
+                <text x="70" y="100" fill="#10b981" font-family="monospace" font-size="11">&gt; Condicionais &amp; Laços [OK]</text>
+                <text x="70" y="120" fill="#a7f3d0" font-family="monospace" font-size="11">&gt; Estruturas de Dados [OK]</text>
+                <text x="70" y="140" fill="#f472b6" font-family="monospace" font-size="11">&gt; Status: Testes Concluídos</text>
+                <rect x="250" y="132" width="8" height="12" fill="#00e5ff" opacity="0.8" />
+                <defs>
+                  <radialGradient id="p2-grad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 100) rotate(90) scale(80)">
+                    <stop stop-color="#00e5ff"/>
+                    <stop offset="1" stop-color="#00e5ff" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">Algoritmos & Resolução de Problemas</h3>
+              <p class="project-desc">
+                Conjunto de soluções e algoritmos desenvolvidos nas disciplinas técnicas, abrangendo fluxo de decisão, repetições, manipulação de vetores e raciocínio lógico.
+              </p>
+              <div class="project-tags">
+                <span class="tag-pill">Lógica</span>
+                <span class="tag-pill">Algoritmos</span>
+                <span class="tag-pill">Fluxogramas</span>
+                <span class="tag-pill">Estruturas</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/37731-svg" target="_blank" rel="noopener noreferrer" class="project-link-btn primary" aria-label="Acessar exercícios no GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Repositório</span>
+                </a>
+                <a href="#contato" class="project-link-btn">
+                  <span>Detalhes</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3: Prática em JavaScript e Interatividade -->
+          <article class="project-card reveal-fade-up delay-3">
+            <div class="project-banner">
+              <span class="project-category-badge">Prática Interativa</span>
+              <!-- Ilustração SVG Tecnológica para JavaScript -->
+              <svg class="project-svg-graphic" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de manipulação interativa do DOM">
+                <rect width="400" height="200" fill="#081024" />
+                <circle cx="200" cy="100" r="80" fill="url(#p3-grad)" opacity="0.15" />
+                <!-- Janela interativa com dashboard -->
+                <rect x="50" y="30" width="300" height="150" rx="8" fill="#0d1b3a" stroke="#60a5fa" stroke-opacity="0.3" stroke-width="1.5" />
+                <rect x="50" y="30" width="300" height="24" fill="#081024" />
+                <circle cx="65" cy="42" r="3.5" fill="#ef4444" />
+                <circle cx="77" cy="42" r="3.5" fill="#f59e0b" />
+                <circle cx="89" cy="42" r="3.5" fill="#10b981" />
+                <rect x="70" y="70" width="120" height="40" rx="6" fill="#142857" stroke="#38bdf8" stroke-opacity="0.3" />
+                <rect x="80" y="80" width="60" height="8" rx="2" fill="#38bdf8" />
+                <rect x="80" y="93" width="90" height="6" rx="2" fill="#64748b" />
+                <rect x="210" y="70" width="120" height="40" rx="6" fill="#142857" stroke="#38bdf8" stroke-opacity="0.3" />
+                <rect x="220" y="80" width="60" height="8" rx="2" fill="#00e5ff" />
+                <rect x="220" y="93" width="90" height="6" rx="2" fill="#64748b" />
+                <rect x="70" y="125" width="260" height="36" rx="6" fill="#09142e" stroke="#38bdf8" stroke-opacity="0.2" />
+                <circle cx="90" cy="143" r="8" fill="#10b981" opacity="0.3" />
+                <circle cx="90" cy="143" r="4" fill="#10b981" />
+                <rect x="110" y="139" width="120" height="8" rx="2" fill="#e2e8f0" opacity="0.8" />
+                <defs>
+                  <radialGradient id="p3-grad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 100) rotate(90) scale(80)">
+                    <stop stop-color="#2563eb"/>
+                    <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">Aplicações Práticas em JavaScript</h3>
+              <p class="project-desc">
+                Desenvolvimento de funcionalidades interativas, manipulação dinâmica do DOM, validação de entradas do usuário e persistência básica com LocalStorage.
+              </p>
+              <div class="project-tags">
+                <span class="tag-pill">JavaScript</span>
+                <span class="tag-pill">DOM</span>
+                <span class="tag-pill">Eventos</span>
+                <span class="tag-pill">Front-end</span>
+              </div>
+              <div class="project-footer">
+                <a href="https://github.com/37731-svg" target="_blank" rel="noopener noreferrer" class="project-link-btn primary" aria-label="Acessar projeto JavaScript no GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Repositório</span>
+                </a>
+                <a href="#contato" class="project-link-btn">
+                  <span>Detalhes</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SEÇÃO 4: HABILIDADES
+    ================================================================== -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        
+        <div class="section-header reveal-fade-up">
+          <div class="section-tag">
+            <span class="dot"></span>
+            <span>Competências</span>
+          </div>
+          <h2 class="section-title">Minhas <span class="highlight-gradient">Habilidades</span></h2>
+          <p class="section-subtitle">
+            Apresentação visual das competências técnicas e metodológicas desenvolvidas na minha trajetória em TI.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+          
+          <!-- Card de Destaque Máximo: Agilidade -->
+          <div class="agility-featured-card reveal-fade-up">
+            <div class="agility-badge-icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="agility-content">
+              <span class="agility-title-tag">Competência Destacada</span>
+              <h3 class="agility-title">Agilidade & Rápida Assimilação</h3>
+              <p class="agility-desc">
+                Facilidade para absorver novos conceitos de programação, aprender comandos e ferramentas com agilidade e responder com prontidão às demandas e desafios propostos em sala de aula e projetos de equipe.
+              </p>
+            </div>
+            <div class="agility-meter">
+              <span class="meter-label">Alto Desempenho</span>
+              <div class="meter-dots" aria-label="Nível de agilidade: 5 de 5">
+                <span class="meter-dot active"></span>
+                <span class="meter-dot active"></span>
+                <span class="meter-dot active"></span>
+                <span class="meter-dot active"></span>
+                <span class="meter-dot active"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grade de Categorias Técnicas -->
+          <div class="skills-categories-grid">
+            
+            <!-- Categoria 1: Desenvolvimento Web & Código -->
+            <div class="skill-category-card reveal-fade-up delay-1">
+              <div class="category-header">
+                <div class="category-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h3 class="category-title">Desenvolvimento & Web</h3>
+              </div>
+              <div class="skills-items-list">
+                
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">HTML5 Semântico</span>
+                    <span class="skill-level-text">Estruturação & Acessibilidade</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="85%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">CSS3 Moderno (Flexbox & Grid)</span>
+                    <span class="skill-level-text">Layouts & Responsividade</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="80%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Lógica de Programação</span>
+                    <span class="skill-level-text">Algoritmos & Fluxos</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="85%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Noções de JavaScript</span>
+                    <span class="skill-level-text">Manipulação do DOM & Eventos</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="70%"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Categoria 2: Informática, Redes & Hardware -->
+            <div class="skill-category-card reveal-fade-up delay-2">
+              <div class="category-header">
+                <div class="category-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <h3 class="category-title">TI & Infraestrutura</h3>
+              </div>
+              <div class="skills-items-list">
+                
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Fundamentos de Hardware</span>
+                    <span class="skill-level-text">Componentes & Arquitetura</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="75%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Redes de Computadores Básica</span>
+                    <span class="skill-level-text">IP, Conectividade & Topologias</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="70%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Sistemas Operacionais</span>
+                    <span class="skill-level-text">Windows, Comandos & Configurações</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="80%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Noções de Banco de Dados</span>
+                    <span class="skill-level-text">Conceitos Relacionais & SQL</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="65%"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Categoria 3: Ferramentas & Metodologia -->
+            <div class="skill-category-card reveal-fade-up delay-3">
+              <div class="category-header">
+                <div class="category-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                </div>
+                <h3 class="category-title">Ferramentas & Hábitos</h3>
+              </div>
+              <div class="skills-items-list">
+                
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Git & GitHub</span>
+                    <span class="skill-level-text">Controle de Versão & Repositórios</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="75%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">VS Code & Editores</span>
+                    <span class="skill-level-text">Extensões & Ambiente Produtivo</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="85%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Trabalho em Equipe</span>
+                    <span class="skill-level-text">Comunicação Clara & Cooperação</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="90%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Organização de Código</span>
+                    <span class="skill-level-text">Boas Práticas & Clareza</span>
+                  </div>
+                  <div class="skill-bar-track">
+                    <div class="skill-bar-fill" data-width="80%"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SEÇÃO 5: CONTATO
+    ================================================================== -->
+    <section class="section" id="contato">
+      <div class="container">
+        
+        <div class="section-header reveal-fade-up">
+          <div class="section-tag">
+            <span class="dot"></span>
+            <span>Vamos Conversar</span>
+          </div>
+          <h2 class="section-title">Entre em <span class="highlight-gradient">Contato</span></h2>
+          <p class="section-subtitle">
+            Estou à disposição para dúvidas, oportunidades de estágio, projetos de estudo ou colaborações na área de TI.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Coluna 1: Informações e Links Diretos -->
+          <div class="contact-info-col reveal-fade-up">
+            
+            <!-- E-mail -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">E-mail Pessoal</span>
+                <a href="mailto:mariaclaralp013@gmail.com" class="contact-value-link" id="email-link">
+                  mariaclaralp013@gmail.com
+                </a>
+                <button type="button" class="btn-copy-email" id="btn-copy-email" aria-label="Copiar endereço de e-mail de Maria Clara">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span id="copy-text">Copiar E-mail</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Perfil no GitHub</span>
+                <a href="https://github.com/37731-svg" target="_blank" rel="noopener noreferrer" class="contact-value-link">
+                  <span>github.com/37731-svg</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Perfil Profissional / Disponibilidade -->
+            <div class="contact-card-item">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Status & Local</span>
+                <span class="contact-value-link">Brasil • Estudante de TI</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
+                  Aberta a oportunidades de estágio e projetos acadêmicos.
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Coluna 2: Formulário com Validação Real e Transparente -->
+          <div class="contact-form-wrapper reveal-fade-up delay-1">
+            <div class="form-header">
+              <h3 class="form-title">Envie uma Mensagem</h3>
+              <p class="form-subtitle">Preencha os campos abaixo para entrar em contato diretamente comigo.</p>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              
+              <!-- Campo Nome -->
+              <div class="form-group">
+                <label for="form-name" class="form-label">
+                  <span>Seu Nome</span>
+                  <span style="color: var(--accent-cyan); font-weight: normal;">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="form-name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="Ex: Ana Silva" 
+                  required
+                  autocomplete="name"
+                >
+                <span class="input-error-msg" id="name-error">Por favor, insira o seu nome completo.</span>
+              </div>
+
+              <!-- Campo E-mail -->
+              <div class="form-group">
+                <label for="form-email" class="form-label">
+                  <span>Seu E-mail</span>
+                  <span style="color: var(--accent-cyan); font-weight: normal;">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="form-email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="Ex: ana@exemplo.com" 
+                  required
+                  autocomplete="email"
+                >
+                <span class="input-error-msg" id="email-error">Por favor, insira um e-mail válido (exemplo: nome@dominio.com).</span>
+              </div>
+
+              <!-- Campo Assunto -->
+              <div class="form-group">
+                <label for="form-subject" class="form-label">
+                  <span>Assunto</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="form-subject" 
+                  name="subject" 
+                  class="form-input" 
+                  placeholder="Ex: Oportunidade de Estágio / Projeto de TI"
+                >
+              </div>
+
+              <!-- Campo Mensagem -->
+              <div class="form-group">
+                <label for="form-message" class="form-label">
+                  <span>Mensagem</span>
+                  <span style="color: var(--accent-cyan); font-weight: normal;">*</span>
+                </label>
+                <textarea 
+                  id="form-message" 
+                  name="message" 
+                  class="form-textarea" 
+                  placeholder="Escreva sua mensagem aqui..." 
+                  required
+                ></textarea>
+                <span class="input-error-msg" id="message-error">Por favor, digite uma mensagem com pelo menos 10 caracteres.</span>
+              </div>
+
+              <!-- Botão de Envio -->
+              <button type="submit" class="btn btn-primary" id="btn-submit" style="width: 100%;">
+                <span>Enviar Mensagem</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <!-- Mensagem de Feedback Real (Sem simulação falsa de envio) -->
+              <div id="form-feedback" class="form-feedback" role="alert"></div>
+
+              <!-- Nota explicativa transparente sobre o envio -->
+              <p class="form-service-note">
+                <strong style="color: var(--text-heading);">Nota de envio direto:</strong> Ao clicar em enviar, os dados são validados e o seu aplicativo de e-mail é acionado com os campos preenchidos diretamente para <strong>mariaclaralp013@gmail.com</strong>.
+              </p>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =================================================================
+       RODAPÉ (FOOTER)
+  ================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-brand">
+          <a href="#inicio" class="logo" aria-label="Voltar ao início">
+            <span class="logo-symbol">&lt;</span>MCNL<span class="logo-symbol">/&gt;</span>
+            <span class="logo-dot"></span>
+          </a>
+          <p class="footer-desc">
+            Maria Clara Nunes Lopes — Estudante de Técnico em Informática. Dedicação, agilidade e constante aprendizado em TI.
+          </p>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="#inicio" class="footer-link">Início</a></li>
+          <li><a href="#sobre" class="footer-link">Sobre Mim</a></li>
+          <li><a href="#projetos" class="footer-link">Projetos</a></li>
+          <li><a href="#habilidades" class="footer-link">Habilidades</a></li>
+          <li><a href="#contato" class="footer-link">Contato</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year"></span> Maria Clara Nunes Lopes. Todos os direitos reservados.
+        </div>
+        <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="Voltar para o topo da página">
+          <span>Voltar ao Topo</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
